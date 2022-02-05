@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "lerna run start --parallel",
-    "build": "lerna run build --scope=\"@react-factory/core\" --scope=\"@react-factory/react\" --scope=\"@react-factory/async\" --parallel",
+    "build": "lerna run build --scope=\"@react-factory/core\" --scope=\"@react-factory/docs\" --parallel",
     "pretest": "yarn build",
     "test": "CI=true lerna run test --parallel",
     "typecheck": "lerna run typecheck --parallel",
@@ -50,7 +50,10 @@
     "react-dom": "17.0.2",
     "react-scripts": "3.4.4",
     "ts-jest": "^26.4.4",
-    "typescript": "4.4.2"
+    "typescript": "4.4.2",
+    "@ez-dux/core": "^1.0.8",
+    "@ez-dux/async": "^1.0.5",
+    "@ez-dux/react": "^1.0.4"
   },
   "workspaces": {
     "packages": [

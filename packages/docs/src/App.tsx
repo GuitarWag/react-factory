@@ -1,4 +1,4 @@
-import { Provider } from '@react-factory/react';
+import { Provider } from '@ez-dux/react';
 import React from 'react';
 
 import { Navigation } from './navigation';

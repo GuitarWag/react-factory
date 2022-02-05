@@ -3,7 +3,7 @@ import {
   createAsyncActionHooks,
   createAsyncDataHooks,
   createModule,
-} from '@react-factory/async';
+} from '@ez-dux/async';
 
 export const NAMESPACE = 'age-module';
 

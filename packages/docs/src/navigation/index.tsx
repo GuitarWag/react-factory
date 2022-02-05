@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Examples } from './Examples';
 import { Home } from './Home';
 
-export const Navigation = () => {
+export const Navigation: React.FC = () => {
   return (
     <Router>
       <div>
