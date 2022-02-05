@@ -1,0 +1,44 @@
+{
+  "name": "@react-factory/core",
+  "version": "1.0.8",
+  "author": {
+    "name": "Wagner Silva",
+    "url": "https://react-factory.web.app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-factory/react-factory.git"
+  },
+  "keywords": [
+    "redux",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/react-factory/react-factory/issues"
+  },
+  "homepage": "https://github.com/react-factory/react-factory",
+  "license": "MIT",
+  "private": false,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "start": "tsc -p tsconfig.json -w",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint . --ignore-path ../../.eslintignore --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint --fix . --ignore-path ../../.eslintignore --ext ts --ext tsx --ext js --ext jsx",
+    "test": "jest --config jest.config.js",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "deps": "yarn install",
+    "pub": "npm version patch --force && yarn publish"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "ts-toolbelt": "^9.3.12"
+  }
+}

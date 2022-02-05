@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es5"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "target": "es5",
+    "module": "commonjs"
+  },
+  "include": [
+    "packages/*/src"
+  ],
+  "exclude": [
+    "node_modules",  "packages/*/__tests__/*", "packages/*/lib/*"
+  ],
+
+}

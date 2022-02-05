@@ -1,0 +1,24 @@
+const pack = require('./package');
+
+module.exports = {
+  // ...base,
+  displayName: pack.name,
+  name: pack.name,
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.js?$': 'babel-jest',
+  },
+  rootDir: '.',
+  automock: false,
+  testEnvironment: 'node',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testPathIgnorePatterns: ['/build/', '/node_modules/'],
+  transformIgnorePatterns: [
+    '../../node_modules/(?!@react-factory/core|@react-factory/react|react-markdown)',
+    'node_modules/(?!react-markdown)',
+  ],
+  collectCoverage: true,
+};
